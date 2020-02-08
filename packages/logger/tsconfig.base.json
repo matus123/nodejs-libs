@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "lib": ["es2018"],
+        "module": "commonjs",
+        "target": "es2018",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "outDir": "./dist",
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictPropertyInitialization": true,
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test"
+    ],
+    "include": [
+        "./src/**/*", "test/logger/loggerInstance.test.ts", "test/logger/logger.test.ts", "test/logger/staticLogger.test.ts"
+    ],
+    "compileOnSave": false
+}

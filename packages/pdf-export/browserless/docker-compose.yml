@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  chrome-browserless:
+    image: browserless/chrome:1.22-chrome-stable
+    ports: 
+      - "3000:3000"
+    restart: always
+    environment: 
+      - MAX_CONCURRENT_SESSIONS=10
+      - CONNECTION_TIMEOUT=60000
+      - MAX_QUEUE_LENGTH=10
+      - HOST=0.0.0.0

@@ -1,0 +1,51 @@
+{
+	"name": "@ai-maps/backend-logger",
+	"version": "0.0.0-semantic-version",
+	"description": "Backend logger",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"author": "AI-MAPS",
+	"license": "Proprietary",
+	"scripts": {
+		"lint": "eslint --ext .ts .",
+		"test": "jest --runInBand -c test/jest.config.js",
+		"build": "tsc -P src/tsconfig.json && npm run copy-files",
+		"copy-files": "cp package.json ./dist/package.json && cp README.md ./dist/README.md",
+		"semantic-release": "semantic-release",
+		"run": "ts-node -T -P tsconfig.json src/run.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "ssh://git@bitbucket.ai-maps.com:7999/shar/shared.backend.logger.git"
+	},
+	"devDependencies": {
+		"@semantic-release/changelog": "3.0.4",
+		"@semantic-release/commit-analyzer": "6.3.0",
+		"@semantic-release/git": "7.0.16",
+		"@semantic-release/npm": "5.1.15",
+		"@semantic-release/release-notes-generator": "7.3.0",
+		"@types/jest": "24.0.18",
+		"@types/lodash": "4.14.138",
+		"@types/node": "12.7.5",
+		"@types/pino": "^5.8.12",
+		"@typescript-eslint/eslint-plugin": "2.15.0",
+		"@typescript-eslint/parser": "2.15.0",
+		"eslint": "6.8.0",
+		"eslint-config-prettier": "6.9.0",
+		"eslint-plugin-prettier": "3.1.0",
+		"handlebars": "4.5.3",
+		"jest": "24.9.0",
+		"prettier": "1.19.1",
+		"semantic-release": "15.13.24",
+		"ts-jest": "24.3.0",
+		"ts-node": "8.3.0",
+		"typescript": "3.7.4"
+	},
+	"dependencies": {
+		"pino": "^5.13.5"
+	},
+	"publishConfig": {
+		"registry": "https://in.ai-maps.com/npm-registry/",
+		"access": "public"
+	}
+}
