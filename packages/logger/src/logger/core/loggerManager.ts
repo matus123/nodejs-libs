@@ -21,6 +21,7 @@ export class LoggerManager {
       if (err) {
         finalLogger.error(err, 'error caused exit');
       }
+      logger.flushSync();
       process.exit(err ? 1 : 0);
     });
 

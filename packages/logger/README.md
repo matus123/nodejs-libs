@@ -1,12 +1,13 @@
 # Instalation
-    - `npm install @ai-maps/backend-logger`
+    - `npm install @ppzero/logger`
+    - `yarn add @ppzero/logger`
 
 # Usage example
 ```javascript
-import { LoggerInstance, LoggerManager } from '@ai-maps/backend-logger';
+import { LoggerInstance, LoggerManager } from '@ppzero/logger';
 const loggerInstance = new LoggerInstance(
     {
-        destination: pino.extreme(),
+        destination: pino.destination({ sync: false }),
     },
     {
         environment: 'test',

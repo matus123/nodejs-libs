@@ -7,7 +7,7 @@ describe('#LoggerInstance', () => {
     /* arange */
     const loggerInstance = new LoggerInstance(
       {
-        destination: pino.extreme(),
+        destination: pino.destination({ sync: false } as any),
       },
       {
         environment: 'test',
@@ -25,7 +25,7 @@ describe('#LoggerInstance', () => {
   test('log', async () => {
     /* arange */
     const tmpFile = '/tmp/test_err.txt';
-    const dest = pino.extreme(tmpFile);
+    const dest = pino.destination({ sync: false, dest: tmpFile } as any);
     const loggerInstance = new LoggerInstance(
       {
         destination: dest,

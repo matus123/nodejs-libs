@@ -23,7 +23,7 @@ describe('#Logger', () => {
       /* arange */
       const loggerInstance = new LoggerInstance(
         {
-          destination: pino.extreme(),
+          destination: pino.destination({ sync: false } as any),
         },
         {
           environment: 'test',
@@ -55,7 +55,7 @@ describe('#Logger', () => {
       /* arange */
       const loggerInstance = new LoggerInstance(
         {
-          destination: pino.extreme(),
+          destination: pino.destination({ sync: false } as any),
         },
         {
           environment: 'test',
@@ -87,7 +87,7 @@ describe('#Logger', () => {
       /* arange */
       const loggerInstance = new LoggerInstance(
         {
-          destination: pino.extreme(),
+          destination: pino.destination({ sync: false } as any),
         },
         {
           environment: 'test',

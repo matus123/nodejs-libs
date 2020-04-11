@@ -19,11 +19,10 @@
     },
     "exclude": [
         "node_modules",
-        "dist",
-        "test"
+        "build"
     ],
     "include": [
-        "./src/**/*", "test/logger/loggerInstance.test.ts", "test/logger/logger.test.ts", "test/logger/staticLogger.test.ts"
+        "./src/**/*", "./test/**/*"
     ],
     "compileOnSave": false
 }

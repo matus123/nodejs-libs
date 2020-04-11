@@ -4,7 +4,7 @@
 	"description": "Backend logger",
 	"main": "index.js",
 	"types": "index.d.ts",
-	"author": "AI-MAPS",
+	"author": "Matus Kislan",
 	"license": "Proprietary",
 	"scripts": {
 		"lint": "eslint --ext .ts .",
@@ -15,10 +15,6 @@
 		"run": "ts-node -T -P tsconfig.json src/run.ts",
 		"publishh": "cd ./build && yarn publish"
 	},
-	"repository": {
-		"type": "git",
-		"url": "ssh://git@bitbucket.ai-maps.com:7999/shar/shared.backend.logger.git"
-	},
 	"devDependencies": {
 		"@semantic-release/changelog": "3.0.4",
 		"@semantic-release/commit-analyzer": "6.3.0",
@@ -28,7 +24,7 @@
 		"@types/jest": "24.0.18",
 		"@types/lodash": "4.14.138",
 		"@types/node": "12.7.5",
-		"@types/pino": "^5.8.12",
+		"@types/pino": "^5.17.0",
 		"@typescript-eslint/eslint-plugin": "2.15.0",
 		"@typescript-eslint/parser": "2.15.0",
 		"eslint": "6.8.0",
@@ -43,7 +39,10 @@
 		"typescript": "3.7.4"
 	},
 	"dependencies": {
-		"pino": "^5.13.5"
+		"pino": "^6.1.1"
+	},
+	"peerDependencies": {
+		"pino": "^6.0.0"
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.com",

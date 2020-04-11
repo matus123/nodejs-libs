@@ -1,6 +1,5 @@
 import { LoggerOptions } from 'pino';
 import SonicBoom from 'sonic-boom';
-import { Writable } from 'stream';
 
 export interface DeploymentInfo {
   component: string;
@@ -22,9 +21,4 @@ export interface LoggerInstanceConfig {
   destination: SonicBoom;
   options?: LoggerOptions;
   hooks?: Partial<LoggerInstanceHooks>;
-}
-
-export interface LoggerInstanceConfigExtreme {
-  output: Writable | string;
-  extreme: boolean;
 }
