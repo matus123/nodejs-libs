@@ -3,15 +3,9 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'plugin:react/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint', 'react'],
-  settings: {
-    "react": {
-      "version": "detect"
-    },
-  },
+  plugins: ['@typescript-eslint'],
   rules: {
     "indent": "off",
     "no-unused-vars": "off",

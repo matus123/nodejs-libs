@@ -1,6 +1,6 @@
 {
-	"name": "@ai-maps/backend-logger",
-	"version": "0.0.0-semantic-version",
+	"name": "@ppzero/logger",
+	"version": "1.0.0",
 	"description": "Backend logger",
 	"main": "index.js",
 	"types": "index.d.ts",
@@ -10,9 +10,10 @@
 		"lint": "eslint --ext .ts .",
 		"test": "jest --runInBand -c test/jest.config.js",
 		"build": "tsc -P src/tsconfig.json && npm run copy-files",
-		"copy-files": "cp package.json ./dist/package.json && cp README.md ./dist/README.md",
+		"copy-files": "cp package.json ./build/package.json && cp README.md ./build/README.md",
 		"semantic-release": "semantic-release",
-		"run": "ts-node -T -P tsconfig.json src/run.ts"
+		"run": "ts-node -T -P tsconfig.json src/run.ts",
+		"publishh": "cd ./build && yarn publish"
 	},
 	"repository": {
 		"type": "git",
@@ -45,7 +46,7 @@
 		"pino": "^5.13.5"
 	},
 	"publishConfig": {
-		"registry": "https://in.ai-maps.com/npm-registry/",
+		"registry": "https://registry.npmjs.com",
 		"access": "public"
 	}
 }
